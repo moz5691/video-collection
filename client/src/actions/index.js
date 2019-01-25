@@ -1,5 +1,6 @@
-import videos from '../api/videos';
+// import videos from '../api/videos';
 import history from '../history';
+import axios from 'axios';
 
 import {
   CREATE_VIDEO,
@@ -47,7 +48,7 @@ export const signOut = () => {
 export const createVideo = (formValues) => {
   return async (dispatch, getState)=> {
     const {userId} = getState().auth;
-    const response = await videos.post('/api/videos', {...formValues, userId});
+    const response = await axios.post('/api/videos', {...formValues, userId});
     console.log('post', response)
     dispatch({type: CREATE_VIDEO, payload: response.data});
     history.push('/');
@@ -56,7 +57,7 @@ export const createVideo = (formValues) => {
 
 export const deleteVideo = (id) => {
   return async (dispatch) => {
-    await videos.delete(`/api/videos/${id}`);
+    await axios.delete(`/api/videos/${id}`);
 
     dispatch({type: DELETE_VIDEO, payload: id});
     history.push('/videos');
@@ -66,7 +67,7 @@ export const deleteVideo = (id) => {
 
 export const fetchVideos = () => {
   return async (dispatch) => {
-    const response = await videos.get('/api/videos')
+    const response = await axios.get('/api/videos')
     console.log('fetch videos', response)
     dispatch({type: FETCH_VIDEOS, payload: response.data})
   }
@@ -75,7 +76,7 @@ export const fetchVideos = () => {
 
 export const fetchVideo = (id) => {
   return async (dispatch) => {
-    const response = await videos.get(`/api/videos/${id}`)
+    const response = await axios.get(`/api/videos/${id}`)
     dispatch({type: FETCH_VIDEO, payload: response.data})
   }
 
@@ -83,7 +84,7 @@ export const fetchVideo = (id) => {
 
 export const editVideo = (id, formValues) => {
   return async (dispatch) => {
-    const response = await videos.patch(`/api/videos/${id}`, formValues);
+    const response = await axios.patch(`/api/videos/${id}`, formValues);
     dispatch({type: EDIT_VIDEO, payload: response.data})
     history.push('/');
   }

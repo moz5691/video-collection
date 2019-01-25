@@ -1,0 +1,68 @@
+import React, {Component} from 'react';
+import { connect } from 'react-redux';
+import { signIn, signOut } from "../actions";
+
+class GoogleAuth extends Component {
+
+
+  componentDidMount() {
+    window.gapi.load('client:auth2', async ()=>{
+        await window.gapi.client.init({
+          clientId: '441261143549-crodit3cgm89nrum1dp7vgji6h548vju.apps.googleusercontent.com',
+          scope: 'email'});
+        this.auth = window.gapi.auth2.getAuthInstance();
+        // this.auth.disconnect();
+        // this.auth.isSignedIn.get() is the method to check if user is signed in/out.
+        // console.log(this.auth.isSignedIn.get());
+        // this.setState({isSignedIn: this.auth.isSignedIn.get()})
+        this.authChange(this.auth.isSignedIn.get());
+        this.auth.isSignedIn.listen(this.authChange);
+        console.log(this.authChange)
+      }
+    )
+  }
+
+  authChange = (isSigned) => {
+    console.log(isSigned);
+    if(isSigned){
+      this.props.signIn(this.auth.currentUser.get().getId())
+    } else {
+      this.props.signOut()
+    }
+  }
+
+  onClickSignIn = () => {
+    this.auth.signIn();
+  }
+
+  onClickSignOut = () => {
+    this.auth.signOut();
+  }
+
+  signInStatus = () => {
+    if (this.props.isSignedIn === null )
+      return <button>Null</button>;
+    else if (this.props.isSignedIn === true )
+      return <button onClick={this.onClickSignOut}>Sign Out</button>
+    else
+      return <button onClick={this.onClickSignIn}>Sign In</button>
+  }
+
+
+  render() {
+    return (
+      <div>
+
+        <p>SignIn status </p>
+
+        {this.signInStatus()}
+      </div>
+    );
+  }
+}
+
+const mapStateToProps = (state) => ({
+  isSignedIn : state.auth.isSignedIn
+})
+
+export default connect(mapStateToProps, {signIn, signOut})(GoogleAuth);

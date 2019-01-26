@@ -51,7 +51,7 @@ export const createVideo = (formValues) => {
     const response = await axios.post('/api/videos', {...formValues, userId});
     console.log('post', response)
     dispatch({type: CREATE_VIDEO, payload: response.data});
-    history.push('/');
+    history.push('/videos');
   }
 }
 
@@ -77,6 +77,7 @@ export const fetchVideos = () => {
 export const fetchVideo = (id) => {
   return async (dispatch) => {
     const response = await axios.get(`/api/videos/${id}`)
+    console.log('fetch', response.data)
     dispatch({type: FETCH_VIDEO, payload: response.data})
   }
 

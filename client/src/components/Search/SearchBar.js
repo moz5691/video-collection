@@ -14,7 +14,6 @@ class SearchBar extends Component {
   render() {
     return (
       <div>
-        <h3>Enter Search input</h3>
         <Input onChange={this.onInputChange}
                value={this.state.term}
                fluid

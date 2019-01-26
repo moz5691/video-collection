@@ -20,7 +20,7 @@ class SearchMain extends Component {
     //   videos: [],
     //   selectedVideo: null
     // }
-    this.videoSearch('surfboards');
+    this.videoSearch('totoro');
   }
 
   videoSearch = (term) => {

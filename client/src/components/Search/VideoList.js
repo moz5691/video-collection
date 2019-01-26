@@ -14,7 +14,7 @@ const VideoList = (props) => {
   } )
 
   return (
-    <div style={{"marginTop":"40px", "textAlign":"center"}}>
+    <div style={{"marginTop":"11px", "textAlign":"center"}}>
       <Segment>
       <h3 style={{"textAlign":"center"}}>More videos</h3>
 

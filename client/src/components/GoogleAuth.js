@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { signIn, signOut } from "../actions";
+import {Button} from 'semantic-ui-react';
 
 class GoogleAuth extends Component {
 
@@ -42,20 +43,17 @@ class GoogleAuth extends Component {
 
   signInStatus = () => {
     if (this.props.isSignedIn === null )
-      return <button>Null</button>;
+      return <Button>Null</Button>;
     else if (this.props.isSignedIn === true )
-      return <button onClick={this.onClickSignOut}>Sign Out</button>
+      return <Button onClick={this.onClickSignOut} color={"red"}>Sign Out</Button>
     else
-      return <button onClick={this.onClickSignIn}>Sign In</button>
+      return <Button onClick={this.onClickSignIn} color={"green"}>Sign In</Button>
   }
 
 
   render() {
     return (
       <div>
-
-        <p>SignIn status </p>
-
         {this.signInStatus()}
       </div>
     );

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Router, Route, Switch} from 'react-router-dom';
-// import './App.css';
+import './App.css';
 import SearchMain from './SearchMain';
 import VideoPlayerMain from './VideoPlayerMain';
 import VideoCreate from './Videos/VideoCreate';
@@ -14,13 +14,13 @@ import history from '../history';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className={"App"}>
 
         <Router history={history}>
           <div>
             <Header/>
             <Switch>
-              <Route exact path={"/"} component={GoogleAuth}/>
+              {/*<Route exact path={"/"} component={GoogleAuth}/>*/}
               <Route exact path={"/videos/search"} component={SearchMain}/>
               <Route path={"/videos/new"} component={VideoCreate}/>
               <Route path={"/videos/edit/:id"} component={VideoEdit}/>

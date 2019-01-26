@@ -1,8 +1,9 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
-import {Menu} from 'semantic-ui-react';
+import {Menu, Image} from 'semantic-ui-react';
 
 import {connect} from 'react-redux';
+import GoogleAuth from './GoogleAuth';
 
 
 
@@ -32,7 +33,12 @@ class Header extends Component{
     const renderContent = this.renderContent();
     console.log(renderContent);
     return (
-      <Menu>
+      <Menu size={"huge"} inverted color={"orange"}>
+        <Menu.Item>
+
+          <Image style={{"height":"40px"}}src="/assets/video-player.png"/>
+
+        </Menu.Item>
       <Menu.Item
         name='Home'
         as={Link}
@@ -60,13 +66,14 @@ class Header extends Component{
         Add
       </Menu.Item>
       <Menu.Item
+        position={"right"}
         name={renderContent.title}
         as={Link}
         to={"/"}
         active={activeItem === renderContent.title}
         onClick={this.handleItemClick}>
         {/*onClick={this.clickLogin}>*/}
-
+        <GoogleAuth/>
       </Menu.Item>
   </Menu>
     );

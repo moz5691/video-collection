@@ -13,7 +13,7 @@ class Header extends Component{
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   renderContent = () => {
-    console.log(this.props.auth.isSignedIn);
+    // console.log(this.props.auth.isSignedIn);
     switch (this.props.auth.isSignedIn){
       case null:
         return { title: 'undecided' }
@@ -31,7 +31,7 @@ class Header extends Component{
   render(){
     const { activeItem } = this.state;
     const renderContent = this.renderContent();
-    console.log(renderContent);
+    // console.log(renderContent);
     return (
       <Menu size={"huge"} inverted color={"orange"}>
         <Menu.Item>

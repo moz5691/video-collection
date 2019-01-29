@@ -51,14 +51,14 @@ export const createVideo = (formValues) => {
     const response = await axios.post('/api/videos', {...formValues, userId});
     console.log('post', response)
     dispatch({type: CREATE_VIDEO, payload: response.data});
-    history.push('/videos');
+    // history.push('/videos');
   }
 }
 
 export const deleteVideo = (id) => {
   return async (dispatch) => {
-    await axios.delete(`/api/videos/${id}`);
-
+    const response = await axios.delete(`/api/videos/${id}`);
+    console.log('delete', response);
     dispatch({type: DELETE_VIDEO, payload: id});
     history.push('/videos');
   }

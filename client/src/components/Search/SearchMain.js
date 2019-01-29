@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {setSelected, setVideos} from "../actions";
+import {setSelected, setVideos} from "../../actions";
 import _ from 'lodash';
 import {Button, Grid, Divider, Segment} from 'semantic-ui-react';
 import YTSearch from 'youtube-api-search'
-import SearchBar from './Search/SearchBar';
-import VideoDetail from './Search/VideoDetails';
-import VideoList from "./Search/VideoList";
-import EditForm from "./Search/EditForm";
+import SearchBar from './SearchBar';
+import VideoDetail from './VideoDetails';
+import VideoList from "./VideoList";
+import EditForm from "./EditForm";
 
 const API_KEY = 'AIzaSyAXmDACA8aIqD5MNSS_9WCEQeY8DR8i9Zc';
 
@@ -30,7 +30,7 @@ class SearchMain extends Component {
       this.props.setSelected(videos[0]);
       this.props.setVideos(videos);
 
-      console.log('videos', videos)
+     // console.log('videos', videos)
     });
 
   }
@@ -47,22 +47,13 @@ class SearchMain extends Component {
             <Segment>
             <EditForm selectedVideo = {this.props.selectedVideo} />
             </Segment>
-
-
           </Grid.Column>
-
           <Grid.Column width={5}>
             <VideoList
               videos = {this.props.videos}
             />
-
           </Grid.Column>
-
-
         </Grid>
-
-
-
       </div>
   )
     ;

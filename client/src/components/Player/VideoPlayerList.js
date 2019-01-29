@@ -7,14 +7,14 @@ import {Link} from 'react-router-dom';
 class VideoPlayerList extends Component {
 
   state = {
-    urlTerm: null
+    urlTerm: "",
+
+    videos: this.props.videos
   }
 
-  componentDidMount() {
-    this.props.fetchVideos();
-    // console.log('fetch videos')
-  }
-
+  // componentDidMount() {
+  //  this.props.fetchVideos();
+  // }
 
 
   onChange=(e)=>{
@@ -30,43 +30,71 @@ class VideoPlayerList extends Component {
     this.props.setUrl(url);
   }
 
-  renderVideoList = () => {
+  renderVideoList = (videos) => {
 
-    if(!this.props.videos){
-      return null;
+    if(!videos){
+      return(<div>...Loading</div>);
     }
+    // const videos = Object.values(this.props.videos);
+    //console.log(videos)
 
-    const videos = Object.values(this.props.videos);
-    console.log(videos)
     return(
-      videos.map( (video) => {
-          console.log('video', video)
-          return (
-              <Feed.Event key={video._id}>
-                <Image src={video.imgUrl} onClick={()=>this.onClickSetUrl(video.url)}/>
-                <Feed.Content style={{"marginLeft":"10px"}}>
-                  <Feed.Date content={'today'}/>
-                  <Feed.Summary>
-                    <p> {video.title}</p>
-                  </Feed.Summary>
-                  <Feed.Extra>
-                    <Button as={Link} to={`/videos/edit/${video._id}`} size="mini" color={"blue"}>Edit</Button>
-                    <Button as={Link} to={`/videos/delete/${video._id}`}  size="mini" color={"orange"}>Delete</Button>
-                  </Feed.Extra>
-                </Feed.Content>
+      Object.keys(videos).map( (key) => {
+          console.log('video', key)
+          return  (
+            <Feed.Event key={key}>
+              <Image src={videos[key].imgUrl} onClick={()=>this.onClickSetUrl(videos[key].url)}/>
+              <Feed.Content style={{"marginLeft":"10px"}}>
+                <Feed.Date content={'today'}/>
+                <Feed.Summary>
+                  <p> {videos[key].title}</p>
+                </Feed.Summary>
+                <Feed.Extra>
+                  {/*<Button as={Link} to={`/videos/edit/${key}`} size="mini" color={"blue"}>Edit</Button>*/}
+                  {/*<Button as={Link} to={`/videos/delete/${key}`}  size="mini" color={"orange"}>Delete</Button>*/}
+                  <Link to={`/videos/edit/${key}`}> <Button size="mini" color={"blue"}>Edit</Button></Link>
+                  <Link to={`/videos/delete/${key}`}><Button  size="mini" color={"orange"}>Delete</Button></Link>
+                </Feed.Extra>
+              </Feed.Content>
 
-              </Feed.Event>
+            </Feed.Event>
           )
+
+
         }
       )
     )
+
+    // return(
+    //   videos.map( (video) => {
+    //      // console.log('video', video)
+    //       return (
+    //           <Feed.Event key={video._id}>
+    //             <Image src={video.imgUrl} onClick={()=>this.onClickSetUrl(video.url)}/>
+    //             <Feed.Content style={{"marginLeft":"10px"}}>
+    //               <Feed.Date content={'today'}/>
+    //               <Feed.Summary>
+    //                 <p> {video.title}</p>
+    //               </Feed.Summary>
+    //               <Feed.Extra>
+    //                 <Button as={Link} to={`/videos/edit/${video._id}`} size="mini" color={"blue"}>Edit</Button>
+    //                 <Button as={Link} to={`/videos/delete/${video._id}`}  size="mini" color={"orange"}>Delete</Button>
+    //               </Feed.Extra>
+    //             </Feed.Content>
+    //
+    //           </Feed.Event>
+    //       )
+    //     }
+    //   )
+    // )
 
     //console.log(Object.values(this.props.videos))
   }
 
   render(){
 
-
+    const {videos} = this.state;
+    const {fetching} = this.props;
     return (
       <div>
         <Form onSubmit={this.onSubmit}>
@@ -85,8 +113,8 @@ class VideoPlayerList extends Component {
             <Card.Header>Video List</Card.Header>
           </Card.Content>
           <Card.Content>
-            <Feed size={"medium"}>
-              {this.renderVideoList()}
+            <Feed size={"small"}>
+              {!fetching && this.renderVideoList(videos)}
             </Feed>
           </Card.Content>
         </Card>
@@ -95,8 +123,10 @@ class VideoPlayerList extends Component {
   }
 }
 
-const mapStateToProps = (state) => (
-  {videos : state.videos}
-)
+// const mapStateToProps = (state) => (
+//   {videos : state.videos}
+// )
 
-export default connect(mapStateToProps,{fetchVideos})(VideoPlayerList);
+// export default connect(mapStateToProps,{fetchVideos})(VideoPlayerList);
+
+export default VideoPlayerList;

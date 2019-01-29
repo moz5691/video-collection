@@ -18,6 +18,7 @@ module.exports = (app) => {
   app.get('/api/videos/:id', async (req,res)=>{
     try {
       const data = await Video.findOne({_id: req.params.id})
+      console.log('fetch', data)
       return res.status(200).send(data)
     } catch(err){
       return res.status(200).send(err);

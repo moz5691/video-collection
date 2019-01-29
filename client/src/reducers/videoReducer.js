@@ -12,8 +12,9 @@ import {
 export default (state={}, action) => {
   switch(action.type){
     case FETCH_VIDEO:
+      console.log('payload', action.payload)
       return {...state, [action.payload._id]: action.payload};
-      // return {...state, ..._.mapKeys(action.payload, '_id') }
+     // return {...state, ..._.mapKeys(action.payload, '_id') }
 
     case CREATE_VIDEO:
       return {...state, [action.payload._id]: action.payload};

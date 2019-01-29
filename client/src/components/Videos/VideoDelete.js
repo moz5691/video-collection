@@ -8,14 +8,15 @@ import {deleteVideo, fetchVideo} from "../../actions";
 class VideoDelete extends Component {
 
   componentDidMount() {
-    console.log(this.props.match.params.id)
+    console.log('id', this.props.match.params.id)
     this.props.fetchVideo(this.props.match.params.id);
   }
 
   renderActions = () => {
     return (
       <React.Fragment>
-        <button onClick={()=>this.props.deleteVideo(this.props.match.params.id)} className={"ui button negative"}>Delete</button>
+        <button onClick={()=>
+         this.props.deleteVideo(this.props.match.params.id)} className={"ui button negative"}>Delete</button>
 
         <Link to="/videos" className={"ui button"}>Cancel</Link>
       </React.Fragment>
@@ -25,11 +26,12 @@ class VideoDelete extends Component {
   renderContent = () => {
     if(!this.props.video) {
       return (
-        'Are you sure to delete this title?'
+        'cannot find this video'
       )
     }
     return (
       `Are you sure to delete ${this.props.video.title}`
+
     )
 
   }

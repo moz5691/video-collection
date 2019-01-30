@@ -48,7 +48,7 @@ module.exports = (app) => {
 
   app.delete('/api/videos/:id', async (req,res)=>{
     try {
-      const video = await Video.findOneAndDelete(req.params.id);
+      const video = await Video.findByIdAndRemove(req.params.id);
       const response ={
         message: "Video was successfully deleted.",
         id: video._id

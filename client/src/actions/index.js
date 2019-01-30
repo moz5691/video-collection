@@ -57,6 +57,7 @@ export const createVideo = (formValues) => {
 
 export const deleteVideo = (id) => {
   return async (dispatch) => {
+    console.log('id', id)
     const response = await axios.delete(`/api/videos/${id}`);
     console.log('delete', response);
     dispatch({type: DELETE_VIDEO, payload: id});

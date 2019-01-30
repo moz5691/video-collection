@@ -8,11 +8,14 @@ class VideoPlayerList extends Component {
 
   state = {
     urlTerm: "",
-    searchTerm: ''
+    searchTerm: '',
+    isLoading: false,
   }
 
   componentDidMount() {
-   this.props.fetchVideos();
+    this.setState({isLoading: true});
+    this.props.fetchVideos();
+    this.setState({isLoading: false});
   }
 
 
@@ -35,7 +38,7 @@ class VideoPlayerList extends Component {
 
   renderVideoList = (videos) => {
 
-    if(!videos){
+    if(!videos || this.state.isLoading){
       return(<div>...Loading</div>);
     }
     // const videos = Object.values(this.props.videos);

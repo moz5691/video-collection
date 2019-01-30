@@ -12,10 +12,9 @@ class VideoPlayerMain extends Component {
     url: null
   }
 
-  // componentDidMount() {
-  //  // this.setState({fetching: true},()=>this.props.fetchVideos() )
-  //   //this.props.fetchVideos()
-  // }
+  componentDidMount() {
+  //   this.props.fetchVideos();
+  }
 
 
   setUrl=(url)=>{

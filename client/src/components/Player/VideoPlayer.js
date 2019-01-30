@@ -30,7 +30,9 @@ class VideoPlayer extends Component {
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    if(!!nextProps) return null;
+
+    console.log('nextProps', nextProps);
+    // if(!!nextProps) return null;
 
     if(nextProps.url !== prevState.url){
      return ({url: nextProps.url})

@@ -9,25 +9,23 @@ import {Grid, Segment} from 'semantic-ui-react';
 class VideoPlayerMain extends Component {
 
   state = {
-    url: null,
-    fetching: false
+    url: null
   }
 
-  componentDidMount() {
-   this.setState({fetching: true},()=>this.props.fetchVideos() )
-   this.setState({fetching: false});
-  }
-
-
+  // componentDidMount() {
+  //  // this.setState({fetching: true},()=>this.props.fetchVideos() )
+  //   //this.props.fetchVideos()
+  // }
 
 
   setUrl=(url)=>{
     console.log('setUrl', url)
     this.setState({url})
   }
+
   render() {
     const {videos} = this.props;
-    const {url, fetching} = this.state;
+    const {url} = this.state;
     return (
       <div >
         <Grid stackable padded>
@@ -38,7 +36,7 @@ class VideoPlayerMain extends Component {
           </Grid.Column>
           <Grid.Column width={6}>
             <Segment>
-            <VideoPlayerList setUrl={this.setUrl} videos={videos} fetching={fetching} />
+            <VideoPlayerList setUrl={this.setUrl} videos={videos} />
             </Segment>
           </Grid.Column>
         </Grid>

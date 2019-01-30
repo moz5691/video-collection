@@ -7,14 +7,12 @@ import {Link} from 'react-router-dom';
 class VideoPlayerList extends Component {
 
   state = {
-    urlTerm: "",
-
-    videos: this.props.videos
+    urlTerm: ""
   }
 
-  // componentDidMount() {
-  //  this.props.fetchVideos();
-  // }
+  componentDidMount() {
+   this.props.fetchVideos();
+  }
 
 
   onChange=(e)=>{
@@ -25,7 +23,7 @@ class VideoPlayerList extends Component {
     this.props.setUrl(this.state.urlTerm);
   }
 
-  onClickSetUrl=(url)=>{
+  handleSetUrl=(url)=>{
     console.log('url', url)
     this.props.setUrl(url);
   }
@@ -43,7 +41,7 @@ class VideoPlayerList extends Component {
           console.log('video', key)
           return  (
             <Feed.Event key={key}>
-              <Image src={videos[key].imgUrl} onClick={()=>this.onClickSetUrl(videos[key].url)}/>
+              <Image src={videos[key].imgUrl} onClick={()=>this.handleSetUrl(videos[key].url)}/>
               <Feed.Content style={{"marginLeft":"10px"}}>
                 <Feed.Date content={'today'}/>
                 <Feed.Summary>
@@ -93,8 +91,8 @@ class VideoPlayerList extends Component {
 
   render(){
 
-    const {videos} = this.state;
-    const {fetching} = this.props;
+    const {videos} = this.props;
+
     return (
       <div>
         <Form onSubmit={this.onSubmit}>
@@ -114,7 +112,7 @@ class VideoPlayerList extends Component {
           </Card.Content>
           <Card.Content>
             <Feed size={"small"}>
-              {!fetching && this.renderVideoList(videos)}
+              {this.renderVideoList(videos)}
             </Feed>
           </Card.Content>
         </Card>
@@ -123,10 +121,9 @@ class VideoPlayerList extends Component {
   }
 }
 
-// const mapStateToProps = (state) => (
-//   {videos : state.videos}
-// )
+const mapStateToProps = (state) => (
+  {videos : state.videos}
+)
 
-// export default connect(mapStateToProps,{fetchVideos})(VideoPlayerList);
+export default connect(mapStateToProps,{fetchVideos})(VideoPlayerList);
 
-export default VideoPlayerList;

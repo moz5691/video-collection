@@ -12,7 +12,7 @@ import {
 export default (state={}, action) => {
   switch(action.type){
     case FETCH_VIDEO:
-      console.log('payload', action.payload)
+
       return {...state, [action.payload._id]: action.payload};
      // return {...state, ..._.mapKeys(action.payload, '_id') }
 
@@ -21,7 +21,9 @@ export default (state={}, action) => {
       // return {...state};
       //return null;
     case FETCH_VIDEOS:
-      return {...state, ..._.mapKeys(action.payload, '_id')}
+      console.log('payload', action.payload);
+      // return {...state, ..._.mapKeys(action.payload, '_id')}
+      return {..._.mapKeys(action.payload, '_id')}
 
     case EDIT_VIDEO:
       return {...state, [action.payload._id]: action.payload};

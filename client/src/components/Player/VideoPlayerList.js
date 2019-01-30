@@ -7,7 +7,8 @@ import {Link} from 'react-router-dom';
 class VideoPlayerList extends Component {
 
   state = {
-    urlTerm: ""
+    urlTerm: "",
+    searchTerm: ''
   }
 
   componentDidMount() {
@@ -15,12 +16,16 @@ class VideoPlayerList extends Component {
   }
 
 
-  onChange=(e)=>{
-    this.setState({urlTerm: e.target.value})
+  onChange=(e, {name})=>{
+    this.setState({[name]: e.target.value})
   }
 
-  onSubmit=()=>{
+  onUrlSubmit=()=>{
     this.props.setUrl(this.state.urlTerm);
+  }
+
+  onSearchSubmit=()=>{
+
   }
 
   handleSetUrl=(url)=>{
@@ -38,8 +43,8 @@ class VideoPlayerList extends Component {
 
     return(
       Object.keys(videos).map( (key) => {
-          console.log('video', key)
-          return  (
+
+          return (videos[key].title.toLowerCase().includes((this.state.searchTerm).toLowerCase())) ? (
             <Feed.Event key={key}>
               <Image src={videos[key].imgUrl} onClick={()=>this.handleSetUrl(videos[key].url)}/>
               <Feed.Content style={{"marginLeft":"10px"}}>
@@ -56,7 +61,7 @@ class VideoPlayerList extends Component {
               </Feed.Content>
 
             </Feed.Event>
-          )
+          ) : ""
 
 
         }
@@ -89,19 +94,35 @@ class VideoPlayerList extends Component {
     //console.log(Object.values(this.props.videos))
   }
 
+
+
+
+
   render(){
 
     const {videos} = this.props;
 
     return (
       <div>
-        <Form onSubmit={this.onSubmit}>
+        <Form onSubmit={this.onUrlSubmit}>
           <Form.Group>
           <Form.Input
             value={this.state.urlTerm}
+            name={"urlTerm"}
             onChange={this.onChange}
             placeholder='video link' />
           <Form.Button content='Submit' />
+          </Form.Group>
+        </Form>
+
+        <Form onSubmit={this.onSearchSubmit}>
+          <Form.Group>
+            <Form.Input
+              value={this.state.searchTerm}
+              name={"searchTerm"}
+              onChange={this.onChange}
+              placeholder='Search' />
+            <Form.Button content='Submit' />
           </Form.Group>
         </Form>
 

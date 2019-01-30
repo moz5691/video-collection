@@ -9,6 +9,7 @@ import VideoDelete from './Videos/VideoDelete';
 import Page404 from './Page404';
 import Header from './Header';
 import GoogleAuth from './GoogleAuth';
+import Home from './Home';
 import history from '../history';
 
 class App extends Component {
@@ -20,12 +21,12 @@ class App extends Component {
           <div>
             <Header/>
             <Switch>
-              {/*<Route exact path={"/"} component={GoogleAuth}/>*/}
+              <Route exact path={"/"} component={Home}/>
+              <Route exact path={"/videos"} component={VideoPlayerMain}/>
               <Route exact path={"/videos/search"} component={SearchMain}/>
               <Route path={"/videos/new"} component={VideoCreate}/>
               <Route path={"/videos/edit/:id"} component={VideoEdit}/>
               <Route path={"/videos/delete/:id"} component={VideoDelete}/>
-              <Route exact path={"/videos"} component={VideoPlayerMain}/>
               <Route component={Page404}/>
             </Switch>
           </div>

@@ -11,6 +11,8 @@ import Header from './Header';
 import GoogleAuth from './GoogleAuth';
 import Home from './Home';
 import history from '../history';
+import PrivateRoute from '../routes/PrivateRoute';
+import PublicRoute from '../routes/PublicRoute';
 
 class App extends Component {
   render() {
@@ -21,12 +23,12 @@ class App extends Component {
           <div>
             <Header/>
             <Switch>
-              <Route exact path={"/"} component={Home}/>
-              <Route exact path={"/videos"} component={VideoPlayerMain}/>
-              <Route exact path={"/videos/search"} component={SearchMain}/>
-              <Route path={"/videos/new"} component={VideoCreate}/>
-              <Route path={"/videos/edit/:id"} component={VideoEdit}/>
-              <Route path={"/videos/delete/:id"} component={VideoDelete}/>
+              <PublicRoute exact path={"/"} component={Home}/>
+              <PrivateRoute exact path={"/videos"} component={VideoPlayerMain}/>
+              <PrivateRoute exact path={"/videos/search"} component={SearchMain}/>
+              <PrivateRoute path={"/videos/new"} component={VideoCreate}/>
+              <PrivateRoute path={"/videos/edit/:id"} component={VideoEdit}/>
+              <PrivateRoute path={"/videos/delete/:id"} component={VideoDelete}/>
               <Route component={Page404}/>
             </Switch>
           </div>

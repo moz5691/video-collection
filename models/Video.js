@@ -6,6 +6,7 @@ const videoSchema = new Schema({
   description: {type: String, default: null},
   imgUrl: {type: String, default: null},
   url: {type: String, default: null},
+  note: {type: String, default: null},
   userId: {type: String, default: null}
 })
 

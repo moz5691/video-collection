@@ -51,7 +51,7 @@ export const createVideo = (formValues) => {
     const response = await axios.post('/api/videos', {...formValues, userId});
     console.log('post', response)
     dispatch({type: CREATE_VIDEO, payload: response.data});
-    // history.push('/videos');
+    history.push('/videos');
   }
 }
 
@@ -88,7 +88,7 @@ export const editVideo = (id, formValues) => {
   return async (dispatch) => {
     const response = await axios.patch(`/api/videos/${id}`, formValues);
     dispatch({type: EDIT_VIDEO, payload: response.data})
-    history.push('/');
+    history.push('/videos');
   }
 
 }

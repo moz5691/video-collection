@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
-import {Menu, Image} from 'semantic-ui-react';
+import {Menu, Image, Icon} from 'semantic-ui-react';
 
 import {connect} from 'react-redux';
 import GoogleAuth from './GoogleAuth';
@@ -34,18 +34,23 @@ class Header extends Component{
     // console.log(renderContent);
     return (
       <Menu size={"huge"} inverted color={"orange"}>
-        <Menu.Item>
+        <Menu.Item
+          name="Home"
+          as={Link}
+          to={"/"}
+          active={activeItem === 'Home'}
+          onClick={this.handleItemClick}>
 
           <Image style={{"height":"40px"}}src="/assets/video-player.png"/>
-
         </Menu.Item>
       <Menu.Item
-        name='Home'
+        name='Search'
         as={Link}
         to={"/videos/search"}
-        active={activeItem === 'Home'}
+        active={activeItem === 'Search'}
         onClick={this.handleItemClick}>
-        Home
+        <Icon color="teal" name={"search"}/>
+        Search
       </Menu.Item>
 
       <Menu.Item
@@ -54,15 +59,17 @@ class Header extends Component{
         to={"/videos"}
         active={activeItem === 'Player'}
         onClick={this.handleItemClick}>
+        <Icon color="teal" name={"youtube"}/>
         Player
       </Menu.Item>
 
       <Menu.Item
-        name='Edit'
+        name='Add'
         as={Link}
-        to={"/videos/edit"}
-        active={activeItem === 'Edit'}
+        to={"/videos/new"}
+        active={activeItem === 'Add'}
         onClick={this.handleItemClick}>
+        <Icon color="teal" name={"plus square outline"}/>
         Add
       </Menu.Item>
       <Menu.Item

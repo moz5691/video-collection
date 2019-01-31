@@ -3,7 +3,7 @@ import history from '../../history';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import {editVideo, fetchVideo} from "../../actions";
-import {Button, Input, Form, Header, Segment, Image, Grid} from "semantic-ui-react";
+import {Button, Input, Form, Header, Segment, Image, Grid, Icon} from "semantic-ui-react";
 
 class VideoEdit extends Component {
 
@@ -11,12 +11,17 @@ class VideoEdit extends Component {
     title: '',
     description: '',
     imgUrl: '',
-    url: ''
+    url: '',
+    note: '',
+    errors: []
   }
 
   componentDidMount() {
     console.log(this.props.match.params.id)
     this.props.fetchVideo(this.props.match.params.id);
+    console.log('video', this.props.video);
+    const {title, description, imgUrl, url, note} = this.props.video;
+    this.setState({title, description, imgUrl, url, note});
   }
 
   onChange = (e, {name, value}) => {
@@ -25,15 +30,16 @@ class VideoEdit extends Component {
 
   onSubmit = (e ) => {
     e.preventDefault();
-    // const formValue = {
-    //   title: this.props.selectedVideo.snippet.title,
-    //   description: this.props.selectedVideo.snippet.description,
-    //   imgUrl: this.props.selectedVideo.snippet.thumbnails.default.url,
-    //   url: `https://www.youtube.com/embed/${videoId}`
-    // }
-    // this.props.editVideo(formValue)
+    const {title, description, imgUrl, url, note} = this.state;
+    const formValue = {title, description, imgUrl, url, note};
+    const id = this.props.match.params.id;
+    this.props.editVideo(id,formValue);
   }
 
+  isFormValid = () => {
+    const {title, description, imgUrl, url, note} = this.state;
+    return ( title && description && imgUrl && url && note)
+  }
 
 
   renderContent = () => {
@@ -44,7 +50,7 @@ class VideoEdit extends Component {
     }
 
     console.log('edit', this.props.video);
-    const {title, description, imgUrl, url} = this.state;
+    const {title, description, imgUrl, url, note} = this.state;
 
     return (
 
@@ -54,18 +60,17 @@ class VideoEdit extends Component {
 
        <Segment>
          <Grid>
-           <Grid.Column width={"5"}>
-             <Image src={this.props.video.imgUrl}/>
+           <Grid.Column width={"5"} >
+             <Image fluid src={this.props.video.imgUrl}/>
            </Grid.Column>
-           <Grid.Column width={"11"}>
-             <Header as={"h2"}>{this.props.video.title}</Header>
-             <Header as={"h4"}>{this.props.video.description}</Header>
-             <Header as={"h4"}>{this.props.video.url}</Header>
-             <Header as={"h4"}>{this.props.video.imgUrl}</Header>
+           <Grid.Column width={"11"} textAlign={"left"}>
+             <Header as={"h2"} color={"teal"}>{this.props.video.title}</Header>
+             <Header as={"h4"}><Icon color={"orange"} name={"clipboard"}/>{this.props.video.description}</Header>
+             <Header as={"h4"}><Icon color={"orange"} name={"film"}/>{this.props.video.url}</Header>
+             <Header as={"h4"}><Icon color={"orange"} name={"picture"}/>Image Link:{this.props.video.imgUrl}</Header>
+             <Header as={"h4"}><Icon color={"orange"} name={"comment outline"}/>{this.props.video.note}</Header>
            </Grid.Column>
          </Grid>
-
-
 
        </Segment>
 
@@ -106,17 +111,20 @@ class VideoEdit extends Component {
                value={url}
              />
            </Form.Field>
-           <Button color="blue" type={"submit"}>Save</Button>
+           <Form.Field>
+             <Input
+               onChange={this.onChange}
+               label={"Note"}
+               placeholder={"Your note here"}
+               name={"note"}
+               value={note}
+             />
+           </Form.Field>
+           <Button color="blue" type={"submit"} disabled={!this.isFormValid()}>Save</Button>
            <Button color="red" type={"submit"}>Cancel</Button>
          </Form>
        </Segment>
-
-
-
-
      </div>
-
-
     )
   }
 

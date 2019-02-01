@@ -78,6 +78,9 @@ const Home = (props) => {
         <Grid.Column width={16}>
           <Segment style={{margin:"50px"}}>
             <Header as={"h5"} icon={"copyright"} content={"by Chan Ho Ahn"} textAlign={"center"}/>
+            <p>Background Image: <a href="http://www.freepik.com">Designed by rawpixel.com / Freepik</a></p>
+            <p>YouTube video search performed is through YouTube APIs and Google.  All copyrights are reserved by YouTube and/or its creators.</p>
+
           </Segment>
         </Grid.Column>
       </Grid.Row>

@@ -14,34 +14,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/actions/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="971">
-              <caret line="57" column="36" lean-forward="true" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
-              <folding>
-                <element signature="e#39#72#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/dev.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+            <state relative-caret-position="36">
+              <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/misc/player.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/misc/search.png">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -51,7 +29,23 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/prod.js">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-233">
+                <caret line="6" selection-start-line="6" selection-end-line="6" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -64,27 +58,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/routes/PrivateRoute.js">
+        <entry file="file://$PROJECT_DIR$/client/src/components/Search/SearchMain.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+            <state relative-caret-position="306">
+              <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/reducers/authReducer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/components/GoogleAuth.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="414">
@@ -94,6 +79,11 @@
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/misc/home.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -108,6 +98,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>video</find>
+      <find>currentUser</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -127,7 +118,6 @@
         <option value="$PROJECT_DIR$/client/src/components/Page404.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/config/keys.js" />
-        <option value="$PROJECT_DIR$/config/prod.js" />
         <option value="$PROJECT_DIR$/client/src/components/Edit/EditForm.js" />
         <option value="$PROJECT_DIR$/client/src/components/Videos/EditForm.js" />
         <option value="$PROJECT_DIR$/client/src/actions/types.js" />
@@ -148,7 +138,6 @@
         <option value="$PROJECT_DIR$/client/src/reducers/videoReducer.js" />
         <option value="$PROJECT_DIR$/client/src/components/Videos/VideoDelete.js" />
         <option value="$PROJECT_DIR$/client/src/components/Player/VideoPlayer.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/client/src/components/Player/VideoPlayerMain.js" />
         <option value="$PROJECT_DIR$/client/src/components/Player/VideoPlayerList.js" />
         <option value="$PROJECT_DIR$/routes/videoRoutes.js" />
@@ -165,14 +154,16 @@
         <option value="$PROJECT_DIR$/client/src/components/App.js" />
         <option value="$PROJECT_DIR$/client/src/routes/PublicRoute.js" />
         <option value="$PROJECT_DIR$/client/src/routes/PrivateRoute.js" />
-        <option value="$PROJECT_DIR$/config/dev.js" />
         <option value="$PROJECT_DIR$/client/src/components/GoogleAuth.js" />
+        <option value="$PROJECT_DIR$/config/dev.js" />
+        <option value="$PROJECT_DIR$/config/prod.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="982" />
-    <option name="y" value="128" />
+    <option name="y" value="127" />
     <option name="width" value="1420" />
     <option name="height" value="981" />
   </component>
@@ -205,7 +196,17 @@
               <item name="video-collection" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="video-collection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="video-collection" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="video-collection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="video-collection" type="462c0819:PsiDirectoryNode" />
+              <item name="misc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="video-collection" type="b2602c69:ProjectViewProjectNode" />
@@ -264,15 +265,15 @@
       <workItem from="1548525235865" duration="12587000" />
       <workItem from="1548792506154" duration="28107000" />
       <workItem from="1548863011843" duration="113000" />
-      <workItem from="1548863446567" duration="21784000" />
+      <workItem from="1548863446567" duration="23394000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128176000" />
+    <option name="totallyTimeSpent" value="129786000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="982" y="128" width="1420" height="981" extended-state="0" />
+    <frame x="982" y="127" width="1420" height="981" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23672883" />
@@ -304,13 +305,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/setupProxy.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -358,16 +352,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/Search/SearchMain.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/Modals.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -402,16 +386,6 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="468">
-            <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-          </first_editor>
           <second_editor />
         </state>
       </provider>
@@ -649,25 +623,8 @@
     <entry file="file://$PROJECT_DIR$/misc/search.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/dev.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/keys.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/prod.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/api/videos.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/GoogleAuth.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -676,6 +633,50 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/misc/home.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/api/videos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/Search/SearchMain.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/dev.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/prod.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-233">
+            <caret line="6" selection-start-line="6" selection-end-line="6" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

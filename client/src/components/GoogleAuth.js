@@ -19,7 +19,7 @@ class GoogleAuth extends Component {
         // this.setState({isSignedIn: this.auth.isSignedIn.get()})
         this.authChange(this.auth.isSignedIn.get());
         this.auth.isSignedIn.listen(this.authChange);
-        console.log(this.authChange)
+        //console.log(this.authChange)
       }
     )
   }
@@ -28,6 +28,7 @@ class GoogleAuth extends Component {
     console.log(isSigned);
     if(isSigned){
       this.props.signIn(this.auth.currentUser.get().getId())
+      console.log('currentUser', this.auth.currentUser.get().w3.ig);
     } else {
       this.props.signOut()
     }
@@ -54,6 +55,7 @@ class GoogleAuth extends Component {
   render() {
     return (
       <div>
+        {this.props.isSignedIn && <span style={{marginRight:"10px", color:"green"}}>{this.auth.currentUser.get().w3.ig}</span> }
         {this.signInStatus()}
       </div>
     );

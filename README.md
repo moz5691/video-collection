@@ -35,9 +35,9 @@ For Heorku deployment, you need to copy your own keys to Config Vars (in Setting
 Make sure you don't surround values with quotation (""). 
 
 ```javascript
-__MONGO_URI__              Your own
-__REACT_APP_API_KEY__      Your own
-__REACT_APP_CLIENT_ID__    Your own
+MONGO_URI             Your own
+REACT_APP_API_KEY      Your own
+REACT_APP_CLIENT_ID    Your own
 ```
 
 

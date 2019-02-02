@@ -20,3 +20,12 @@
     "mongoose": "^5.4.6"
   }
 }
+
+MONGO_URI
+mongodb://user:password00@ds145385.mlab.com:45385/video-collection
+REACT_APP_API_KEY
+AIzaSyAXmDACA8aIqD5MNSS_9WCEQeY8DR8i9Zc
+REACT_APP_CLIENT_ID
+1079724057463-dmsham9q8ais8uv9ui3b2h4hvslnn3p1.apps.googleusercontent.com
+
+video-collection-cahn

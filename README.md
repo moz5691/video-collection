@@ -38,9 +38,7 @@ Make sure you don't surround values with quotation ("").
 MONGO_URI             Your own
 REACT_APP_API_KEY      Your own
 REACT_APP_CLIENT_ID    Your own
-```
-
-
+```]
 
 
 To run : 

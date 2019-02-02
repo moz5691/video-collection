@@ -10,6 +10,7 @@ import VideoList from "./VideoList";
 import EditForm from "./EditForm";
 
 // const API_KEY = process.env.REACT_APP_API_KEY;
+const API_KEY = 'AIzaSyAXmDACA8aIqD5MNSS_9WCEQeY8DR8i9Zc';
 
 class SearchMain extends Component {
 
@@ -19,7 +20,7 @@ class SearchMain extends Component {
   }
 
   videoSearch = (term) => {
-    YTSearch({ key: process.env.REACT_APP_API_KEY, term: term }, videos => {
+    YTSearch({ key: API_KEY, term: term }, videos => {
       // this.setState({ videos: videos, selectedVideo: videos[0] });
 
       this.props.setSelected(videos[0]);

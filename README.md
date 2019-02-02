@@ -31,6 +31,16 @@ REACT_APP_API_KEY='your own'
 REACT_APP_CLIENT_ID='your own'
 ```
 
+For Heorku deployment, you need to copy your own keys to Config Vars (in Settings).
+Make sure you don't surround values with quotation (""). 
+
+```javascript
+__MONGO_URI__              Your own
+__REACT_APP_API_KEY__      Your own
+__REACT_APP_CLIENT_ID__    Your own
+```
+
+
 To run : 
 ___npm run dev___
 -------

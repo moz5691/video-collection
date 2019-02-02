@@ -5,10 +5,9 @@ The built-in video play is pretty capable.  It can play many different video for
 "Player" page is pretty fancy with many built-in features including searching videos from library
 
   
+External sources are MongoDB, Google YouTube API, Google OAuth20,
 
-
-To run it, add your own MongoDB, 
-and create dev.js 
+Add your own MongoDB, create dev.js 
 
 /src/config/dev.js
 ```javascript
@@ -20,16 +19,17 @@ module.exports = {
 Google API Keys, create .env at root level of project
 In this repo, root level is /video-collection/client/,
 
-Need two separate key,
+Need two separate keys,
  
 (1) REACT_APP_API_KEY --> key for youtube video search
 (2) REACT_APP_CLIENT_ID --> client key for Google OAuth2
 
+```javascript
 /video-collection/client/.env
 
 REACT_APP_API_KEY='your own'
 REACT_APP_CLIENT_ID='your own'
-
+```
 
 To run : 
 ___npm run dev___

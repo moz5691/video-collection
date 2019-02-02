@@ -80,9 +80,6 @@ class EditForm extends Component {
         </Form.Field>
           <Button fluid color="blue" type={"submit"}>Save</Button>
       </Form>
-
-
-
     );
   }
 }

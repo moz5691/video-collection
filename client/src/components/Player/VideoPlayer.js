@@ -30,14 +30,16 @@ class VideoPlayer extends Component {
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
-
+    // console.log("prevState", prevState);
     // console.log('nextProps', nextProps);
-    // don't know why.. following cause video cannot play.
-    // if(!!nextProps) return null;
-
+    // don't know why.. following cause video cannot play.;
+    // if(nextProps) {
+    //   return null;
+    // }
     if(nextProps.url !== prevState.url){
-     return ({url: nextProps.url})
+     return ({url: nextProps.url});
     }
+    return null;
   }
 
   load = (url) => {

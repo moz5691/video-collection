@@ -12,6 +12,7 @@ dev.js
 /build
 
 # misc
+.note.txt
 .DS_Store
 .env
 .env.local

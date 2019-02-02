@@ -49,7 +49,7 @@ class VideoPlayerList extends Component {
 
           return (videos[key].title.toLowerCase().includes((this.state.searchTerm).toLowerCase())) ? (
             <Feed.Event key={key}>
-              <Image src={videos[key].imgUrl} onClick={()=>this.handleSetUrl(videos[key].url)}/>
+              <Image style={{cursor:"pointer"}} src={videos[key].imgUrl} onClick={()=>this.handleSetUrl(videos[key].url)}/>
               <Feed.Content style={{"marginLeft":"10px"}}>
                 <Feed.Date content={'today'}/>
                 <Feed.Summary>

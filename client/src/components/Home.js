@@ -44,7 +44,7 @@ const Home = (props) => {
       </Grid.Row>
       <Grid.Row >
 
-        <Grid.Column width={8} relaxed>
+        <Grid.Column width={8} relaxed={"true"}>
           <Segment style={{marginLeft: '50px', marginBottom: '3px'}}>
           <div style={{margin:"8px", textAlign:"center"}}>
             <iframe width="400" height="250"

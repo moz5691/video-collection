@@ -31,7 +31,8 @@ class VideoPlayer extends Component {
 
   static getDerivedStateFromProps(nextProps, prevState) {
 
-    console.log('nextProps', nextProps);
+    // console.log('nextProps', nextProps);
+    // don't know why.. following cause video cannot play.
     // if(!!nextProps) return null;
 
     if(nextProps.url !== prevState.url){

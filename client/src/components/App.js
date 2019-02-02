@@ -8,13 +8,14 @@ import VideoEdit from './Videos/VideoEdit';
 import VideoDelete from './Videos/VideoDelete';
 import Page404 from './Page404';
 import Header from './Header';
-import GoogleAuth from './GoogleAuth';
+//import GoogleAuth from './GoogleAuth';
 import Home from './Home';
 import history from '../history';
 import PrivateRoute from '../routes/PrivateRoute';
 import PublicRoute from '../routes/PublicRoute';
 
 class App extends Component {
+
   render() {
     return (
       <div className={"App"}>

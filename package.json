@@ -1,6 +1,9 @@
 {
   "name": "video-collection",
   "version": "1.0.0",
+  "engines": {
+    "node": "11.0.0"
+  },
   "description": "Find videos and create collections.",
   "main": "index.js",
   "scripts": {

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {setSelected, setVideos} from "../../actions";
 import _ from 'lodash';
-import {Button, Grid, Divider, Segment} from 'semantic-ui-react';
+import {Grid, Segment} from 'semantic-ui-react';
 import YTSearch from 'youtube-api-search'
 import SearchBar from './SearchBar';
 import VideoDetail from './VideoDetails';
@@ -15,10 +15,6 @@ class SearchMain extends Component {
 
   constructor(props){
     super(props);
-    // this.state = {
-    //   videos: [],
-    //   selectedVideo: null
-    // }
     this.videoSearch('totoro');
   }
 

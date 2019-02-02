@@ -14,7 +14,7 @@ const VideoDetails = ({video}) => {
   return (
     <Segment>
       <div style={{"textAlign":"center"}}>
-        <iframe src={url} width="450" height="340" frameBorder={0}></iframe>
+        <iframe src={url} width="450" height="340" frameBorder={0} title={"title"}/>
       </div>
       <Divider/>
       <div>

@@ -21,7 +21,6 @@ export default (state={}, action) => {
       // return {...state};
       //return null;
     case FETCH_VIDEOS:
-      console.log('payload', action.payload);
       // return {...state, ..._.mapKeys(action.payload, '_id')}
       return {..._.mapKeys(action.payload, '_id')}
 

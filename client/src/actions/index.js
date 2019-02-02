@@ -69,7 +69,7 @@ export const deleteVideo = (id) => {
 export const fetchVideos = () => {
   return async (dispatch) => {
     const response = await axios.get('/api/videos')
-    console.log('fetch videos', response)
+    // console.log('fetch videos', response)
     dispatch({type: FETCH_VIDEOS, payload: response.data})
   }
 

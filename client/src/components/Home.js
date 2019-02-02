@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid, Segment, Header, Icon, Image} from "semantic-ui-react";
+import {Grid, Segment, Header, Image} from "semantic-ui-react";
 import {bounce, fadeIn, flash, zoomIn, bounceInRight} from 'react-animations';
 import Radium, {StyleRoot} from 'radium';
 
@@ -50,7 +50,9 @@ const Home = (props) => {
             <iframe width="400" height="250"
   src="https://www.youtube.com/embed/ByXuk9QqQkk" frameBorder="0"
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen/>
+  allowFullScreen
+            title={"title"}
+            />
 
           </div>
           </Segment>

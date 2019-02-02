@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import history from '../../history';
+// import history from '../../history';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import {createVideo} from "../../actions";

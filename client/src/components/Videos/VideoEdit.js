@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import history from '../../history';
+// import history from '../../history';
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 import {editVideo, fetchVideo} from "../../actions";
 import {Button, Input, Form, Header, Segment, Image, Grid, Icon} from "semantic-ui-react";
 
@@ -49,7 +49,7 @@ class VideoEdit extends Component {
       )
     }
 
-    console.log('edit', this.props.video);
+    // console.log('edit', this.props.video);
     const {title, description, imgUrl, url, note} = this.state;
 
     return (

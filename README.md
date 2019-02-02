@@ -14,7 +14,7 @@ Add your own MongoDB, create dev.js
 module.exports = {
   mongoURI: 'own mongodb URL'
 };
-````
+```
 
 Google API Keys, create .env at root level of project
 In this repo, root level is /video-collection/client/,
@@ -24,9 +24,9 @@ Need two separate keys,
 (1) REACT_APP_API_KEY --> key for youtube video search
 (2) REACT_APP_CLIENT_ID --> client key for Google OAuth2
 
-```javascript
-/video-collection/client/.env
 
+/video-collection/client/.env
+```javascript
 REACT_APP_API_KEY='your own'
 REACT_APP_CLIENT_ID='your own'
 ```
@@ -34,7 +34,7 @@ REACT_APP_CLIENT_ID='your own'
 For Heorku deployment, you need to copy your own keys to Config Vars (in Settings).
 Make sure you don't surround values with quotation (""). 
 
-```javascript
+```
 MONGO_URI             Your own
 REACT_APP_API_KEY      Your own
 REACT_APP_CLIENT_ID    Your own

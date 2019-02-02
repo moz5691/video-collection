@@ -17,6 +17,20 @@ module.exports = {
 };
 ````
 
+Google API Keys, create .env at root level of project
+In this repo, root level is /video-collection/client/,
+
+Need two separate key,
+ 
+(1) REACT_APP_API_KEY --> key for youtube video search
+(2) REACT_APP_CLIENT_ID --> client key for Google OAuth2
+
+/video-collection/client/.env
+
+REACT_APP_API_KEY='your own'
+REACT_APP_CLIENT_ID='your own'
+
+
 To run : 
 ___npm run dev___
 -------

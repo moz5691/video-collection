@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { signIn, signOut } from "../actions";
 import {Button} from 'semantic-ui-react';
 
-const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
+// const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 
 class GoogleAuth extends Component {
 
@@ -12,7 +12,7 @@ class GoogleAuth extends Component {
 
     window.gapi.load('client:auth2', async ()=>{
         await window.gapi.client.init({
-          clientId: CLIENT_ID,
+          clientId: process.env.REACT_APP_CLIENT_ID,
           scope: 'email'});
         this.auth = window.gapi.auth2.getAuthInstance();
         // this.auth.disconnect();

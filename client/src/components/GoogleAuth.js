@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 import { signIn, signOut } from "../actions";
 import {Button} from 'semantic-ui-react';
 
-// const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
-const CLIENT_ID ="1079724057463-dmsham9q8ais8uv9ui3b2h4hvslnn3p1.apps.googleusercontent.com";
+const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 
 class GoogleAuth extends Component {
 

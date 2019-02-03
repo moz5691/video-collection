@@ -9,8 +9,7 @@ import VideoDetail from './VideoDetails';
 import VideoList from "./VideoList";
 import EditForm from "./EditForm";
 
-// const API_KEY = process.env.REACT_APP_API_KEY;
-const API_KEY = 'AIzaSyAXmDACA8aIqD5MNSS_9WCEQeY8DR8i9Zc';
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 class SearchMain extends Component {
 

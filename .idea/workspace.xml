@@ -38,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+            <state relative-caret-position="382">
+              <caret line="35" column="19" lean-forward="true" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -65,11 +65,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/index.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
               <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -88,17 +97,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="18">
               <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/Search/SearchBar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -177,23 +175,23 @@
         <option value="$PROJECT_DIR$/client/src/components/Videos/VideoEdit.js" />
         <option value="$PROJECT_DIR$/client/src/reducers/videoReducer.js" />
         <option value="$PROJECT_DIR$/client/src/actions/index.js" />
-        <option value="$PROJECT_DIR$/client/package.json" />
         <option value="$PROJECT_DIR$/client/src/components/Player/VideoPlayer.js" />
         <option value="$PROJECT_DIR$/client/src/components/Search/EditForm.js" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/note.txt" />
         <option value="$PROJECT_DIR$/client/src/components/Search/SearchMain.js" />
         <option value="$PROJECT_DIR$/client/src/components/GoogleAuth.js" />
         <option value="$PROJECT_DIR$/client/src/components/App.css" />
         <option value="$PROJECT_DIR$/client/src/index.css" />
+        <option value="$PROJECT_DIR$/client/package.json" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="377" />
-    <option name="y" value="54" />
+    <option name="x" value="557" />
+    <option name="y" value="99" />
     <option name="width" value="1633" />
     <option name="height" value="1137" />
   </component>
@@ -215,48 +213,6 @@
               <item name="video-collection" type="b2602c69:ProjectViewProjectNode" />
               <item name="video-collection" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="video-collection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="video-collection" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="video-collection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="video-collection" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="video-collection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="video-collection" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="video-collection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="video-collection" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="video-collection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="video-collection" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Player" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="video-collection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="video-collection" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Search" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -322,15 +278,15 @@
       <workItem from="1548863446567" duration="23728000" />
       <workItem from="1549054827052" duration="1297000" />
       <workItem from="1549113809708" duration="6317000" />
-      <workItem from="1549134325344" duration="8550000" />
+      <workItem from="1549134325344" duration="9922000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146284000" />
+    <option name="totallyTimeSpent" value="147656000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="866" y="222" width="1633" height="1137" extended-state="0" />
+    <frame x="557" y="99" width="1633" height="1137" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20535159" />
@@ -528,13 +484,6 @@
         <state relative-caret-position="-473" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/yarn.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/videoRoutes.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -610,13 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/Player/VideoPlayer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
@@ -641,13 +583,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -713,10 +648,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/yarn.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="35" column="19" lean-forward="true" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
         </state>
       </provider>
     </entry>

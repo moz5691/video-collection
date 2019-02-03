@@ -21,6 +21,9 @@
     "semantic-ui-react": "^0.84.0",
     "youtube-api-search": "^0.0.5"
   },
+  "resolutions": {
+    "terser": "3.14.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

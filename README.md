@@ -38,7 +38,7 @@ Make sure you don't surround values with quotation ("").
 MONGO_URI             Your own
 REACT_APP_API_KEY      Your own
 REACT_APP_CLIENT_ID    Your own
-```]
+```
 
 
 To run : 
@@ -47,7 +47,7 @@ ___npm run dev___
 
 ___Login___ 'Google OAuth2'
 
- ___Search___  Google Youtube Search API
+___Search___  Google Youtube Search API
  
 ___Front End___  React, Redux, Semantic UI
 
